@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="ww_427e1ef2e7cf2" v='1.3' loc='auto' a='{"t":"ticker","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"fahrenheit","cl_bkg":"#7B1FA2","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/" id="ww_427e1ef2e7cf2_u" target="_blank">Weather widget</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_427e1ef2e7cf2"></script></div>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+            "symbols": [
+            {
+                "proName": "FOREXCOM:SPXUSD",
+                "title": "S&P 500 Index"
+            },
+            {
+                "proName": "FOREXCOM:NSXUSD",
+                "title": "US 100 Cash CFD"
+            },
+            {
+                "proName": "FX_IDC:EURUSD",
+                "title": "EUR to USD"
+            },
+            {
+                "proName": "BITSTAMP:BTCUSD",
+                "title": "Bitcoin"
+            },
+            {
+                "proName": "BITSTAMP:ETHUSD",
+                "title": "Ethereum"
+            },
+            {
+                "description": "Nvidia",
+                "proName": "NASDAQ:NVDA"
+            },
+            {
+                "description": "Apple",
+                "proName": "NASDAQ:AAPL"
+            },
+            {
+                "description": "AMD",
+                "proName": "NASDAQ:AMD"
+            },
+            {
+                "description": "Boeing",
+                "proName": "NYSE:BA"
+            },
+            {
+                "description": "Intel",
+                "proName": "NASDAQ:INTC"
+            },
+            {
+                "description": "Broadcom",
+                "proName": "NASDAQ:AVGO"
+            },
+            {
+                "description": "Tesla",
+                "proName": "NASDAQ:TSLA"
+            },
+            {
+                "description": "Adobe",
+                "proName": "NASDAQ:ADBE"
+            },
+            {
+                "description": "META",
+                "proName": "NASDAQ:META"
+            },
+            {
+                "description": "Microsoft",
+                "proName": "NASDAQ:MSFT"
+            },
+            {
+                "description": "Dell",
+                "proName": "NYSE:DELL"
+            },
+            {
+                "description": "Amazon",
+                "proName": "NASDAQ:AMZN"
+            },
+            {
+                "description": "Coinbase",
+                "proName": "NASDAQ:COIN"
+            },
+            {
+                "description": "NETFLIX",
+                "proName": "NASDAQ:NFLX"
+            }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "colorTheme": "dark",
+            "locale": "en"
+        }
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+        
+        <!-- World Clocks -->
+        <div id="worldClocks" class="world-clocks">
+            <!-- Clock cards -->
+            <div class="clock-card">
+                <h3>New York</h3>
+                <p id="timeNY"></p>
+            </div>
+            <div class="clock-card">
+                <h3>London</h3>
+                <p id="timeLondon"></p>
+            </div>
+            <div class="clock-card">
+                <h3>Tokyo</h3>
+                <p id="timeTokyo"></p>
+            </div>
+            <div class="clock-card">
+                <h3>Sydney</h3>
+                <p id="timeSydney"></p>
+            </div>
+        </div>
+        
+        <div class="parent-container">
+            <!-- TradingView Widget -->
+            <div class="tradingview-widget-container">
+                <!-- Embed TradingView Widget code -->
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                {
+                    "width": "800",
+                    "height": "330",
+                    "symbol": "NASDAQ:TSLA",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "dark",
+                    "style": "2",
+                    "locale": "en",
+                    "enable_publishing": false,
+                    "backgroundColor": "rgba(255, 255, 255, 1)",
+                    "hide_side_toolbar": false,
+                    "allow_symbol_change": true,
+                    "hotlist": true,
+                    "calendar": false,
+                    "support_host": "https://www.tradingview.com"
+                }
+                </script>
+            </div>
+
+            <div class="youtube-container">
+                <select id="youtube-streams" class="stream-selector">
+                    <option value="iyOq8DhaMYw" selected>BLOOMBERG</option>
+                    <option value="OAHHA27td-A">YAHOO! FINANCE</option>
+                    <option value="w9uJg68CV4g">SKY NEWS</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <iframe id="player" width="580" height="330" src="https://www.youtube.com/embed/iyOq8DhaMYw?si=bRbZeMTlcwTclu3D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="tool-container">
+            <!-- Container for the TradingView widget buttons -->
+            <div class="tradingview-buttons-container">
+                <!-- First TradingView widget button -->
+                <button id="toggleButton">Top Gainers & Losers</button>
+                <!-- Second TradingView widget button -->
+                <button id="toggleTradingViewButton">Market Overview</button>
+            </div>
+    
+            <!-- TradingView Widget BEGIN -->
+            <div class="topstocks-widget-container" id="topStocksContainer">
+                <button id="closeButton">X</button>
+                <div class="topstocks-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+                {
+                "colorTheme": "dark",
+                "dateRange": "12M",
+                "exchange": "US",
+                "showChart": true,
+                "locale": "en",
+                "largeChartUrl": "",
+                "isTransparent": false,
+                "showSymbolLogo": true,
+                "showFloatingTooltip": false,
+                "width": "400",
+                "height": "550",
+                "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                "gridLineColor": "rgba(240, 243, 250, 0)",
+                "scaleFontColor": "rgba(209, 212, 220, 1)",
+                "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
+                }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+    
+            <!-- Additional TradingView Widget BEGIN -->
+            <div class="topstocks-widget-container" id="topStocksContainer2">
+                <button id="closeButton2">X</button>
+                <div class="topstocks-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                    {
+                    "width": 550,
+                    "height": 550,
+                    "symbolsGroups": [
+                      {
+                        "name": "Indices",
+                        "originalName": "Indices",
+                        "symbols": [
+                          {
+                            "name": "FOREXCOM:SPXUSD",
+                            "displayName": "S&P 500 Index"
+                          },
+                          {
+                            "name": "FOREXCOM:NSXUSD",
+                            "displayName": "US 100 Cash CFD"
+                          },
+                          {
+                            "name": "FOREXCOM:DJI",
+                            "displayName": "Dow Jones Industrial Average Index"
+                          },
+                          {
+                            "name": "INDEX:NKY",
+                            "displayName": "Nikkei 225"
+                          },
+                          {
+                            "name": "INDEX:DEU40",
+                            "displayName": "DAX Index"
+                          },
+                          {
+                            "name": "FOREXCOM:UKXGBP",
+                            "displayName": "FTSE 100 Index"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Futures",
+                        "originalName": "Futures",
+                        "symbols": [
+                          {
+                            "name": "CME_MINI:ES1!",
+                            "displayName": "S&P 500"
+                          },
+                          {
+                            "name": "CME:6E1!",
+                            "displayName": "Euro"
+                          },
+                          {
+                            "name": "COMEX:GC1!",
+                            "displayName": "Gold"
+                          },
+                          {
+                            "name": "NYMEX:CL1!",
+                            "displayName": "WTI Crude Oil"
+                          },
+                          {
+                            "name": "NYMEX:NG1!",
+                            "displayName": "Gas"
+                          },
+                          {
+                            "name": "CBOT:ZC1!",
+                            "displayName": "Corn"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Bonds",
+                        "originalName": "Bonds",
+                        "symbols": [
+                          {
+                            "name": "CBOT:ZB1!",
+                            "displayName": "T-Bond"
+                          },
+                          {
+                            "name": "CBOT:UB1!",
+                            "displayName": "Ultra T-Bond"
+                          },
+                          {
+                            "name": "EUREX:FGBL1!",
+                            "displayName": "Euro Bund"
+                          },
+                          {
+                            "name": "EUREX:FBTP1!",
+                            "displayName": "Euro BTP"
+                          },
+                          {
+                            "name": "EUREX:FGBM1!",
+                            "displayName": "Euro BOBL"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Forex",
+                        "originalName": "Forex",
+                        "symbols": [
+                          {
+                            "name": "FX:EURUSD",
+                            "displayName": "EUR to USD"
+                          },
+                          {
+                            "name": "FX:GBPUSD",
+                            "displayName": "GBP to USD"
+                          },
+                          {
+                            "name": "FX:USDJPY",
+                            "displayName": "USD to JPY"
+                          },
+                          {
+                            "name": "FX:USDCHF",
+                            "displayName": "USD to CHF"
+                          },
+                          {
+                            "name": "FX:AUDUSD",
+                            "displayName": "AUD to USD"
+                          },
+                          {
+                            "name": "FX:USDCAD",
+                            "displayName": "USD to CAD"
+                          }
+                        ]
+                      }
+                    ],
+                    "showSymbolLogo": true,
+                    "isTransparent": false,
+                    "colorTheme": "dark",
+                    "locale": "en",
+                    "backgroundColor": "#131722"
+                  }
+                    </script>
+                  </div>
+                  <!-- TradingView Widget END -->
+            <!-- TradingView Widget END -->
+        </div>
+            <div id="newsTicker" class="news-ticker"></div>
+    
+    <!-- Additional Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
