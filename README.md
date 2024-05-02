@@ -2,12 +2,12 @@
 This project is a dashboard website that provides various functionalities, including displaying YouTube videos, trading data from TradingView, a news ticker, and world clocks.
 
 # Table of Contents
-# Installation
-# Usage
-# Features
-# Contributing
-# License
-# Installation
+## Installation
+## Usage
+## Features
+## Contributing
+## License
+## Installation
 
 ## Clone the repository: 
 ```bash
