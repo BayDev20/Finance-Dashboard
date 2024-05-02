@@ -1,3 +1,5 @@
+![image](https://github.com/BayDev20/Finance-Dashboard/assets/152105436/2121f1e1-a4e7-4a53-83e8-98c61623dfed)
+
 # Dashboard Project
 This project is a dashboard website that provides various functionalities, including displaying YouTube videos, trading data from TradingView, a news ticker, and world clocks.
 
